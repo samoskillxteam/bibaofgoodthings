@@ -1,7 +1,21 @@
 <script setup lang="ts">
-import { useForm, Head } from '@inertiajs/vue3';
+import { computed } from 'vue';
+import { useForm, Head, usePage } from '@inertiajs/vue3';
+import type { PageProps } from '@/types';
 import ThemeToggle from '@/Components/ThemeToggle.vue';
+import { useTheme } from '@/composables/useTheme';
 import { Lock, Mail, ArrowRight, ShieldCheck } from 'lucide-vue-next';
+
+const page = usePage<PageProps>();
+const { isDark } = useTheme();
+
+const settings = computed(() => page.props.settings);
+const logoSrc = computed(() => {
+    if (isDark.value) {
+        return settings.value?.logo_dark_url || '/images/logo_dark.png';
+    }
+    return settings.value?.logo_url || '/images/logo.png';
+});
 
 const form = useForm({
     email: '',
@@ -26,8 +40,12 @@ const submit = () => {
         </div>
 
         <div class="sm:mx-auto sm:w-full sm:max-w-md text-center space-y-3">
-            <div class="w-16 h-16 rounded-3xl bg-[#2D241E] dark:bg-[#C59A65] text-white dark:text-[#0F1115] flex items-center justify-center mx-auto shadow-md">
-                <span class="font-display font-bold text-3xl">B</span>
+            <div class="w-16 h-16 rounded-2xl bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-2 flex items-center justify-center mx-auto shadow-md">
+                <img 
+                    :src="logoSrc" 
+                    alt="Biba of Good Things" 
+                    class="w-full h-full object-contain rounded-xl"
+                />
             </div>
             <h2 class="font-display font-bold text-2xl sm:text-3xl tracking-tight text-zinc-900 dark:text-zinc-100">
                 Biba Administrator
