@@ -18,7 +18,7 @@ const page = usePage<PageProps>();
 const settings = computed(() => page.props.settings);
 
 const cleanWhatsApp = computed(() => {
-    const raw = props.whatsappNumber || settings.value?.whatsapp_number || '2348012345678';
+    const raw = props.whatsappNumber || settings.value?.whatsapp_number || '2348083271068';
     return raw.replace(/[^\d]/g, '');
 });
 
@@ -79,8 +79,8 @@ const directWhatsappUrl = computed(() => {
                         </div>
                         <h3 class="font-serif font-bold text-xl text-zinc-900 dark:text-zinc-100">Phone & Email</h3>
                         <div class="space-y-1.5 text-xs text-zinc-500 dark:text-zinc-400">
-                            <p class="font-semibold text-zinc-800 dark:text-zinc-200">{{ phone || '+234 801 234 5678' }}</p>
-                            <p>{{ email || 'hello@biba.com' }}</p>
+                            <p class="font-semibold text-zinc-800 dark:text-zinc-200">{{ phone || '+234 808 327 1068' }}</p>
+                            <p>{{ email || 'bibaofgoodthings@gmail.com' }}</p>
                         </div>
                     </div>
 

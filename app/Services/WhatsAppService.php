@@ -12,7 +12,7 @@ class WhatsAppService
     {
         $reference = 'BIB-' . date('Ymd') . '-' . strtoupper(Str::random(5));
         $businessName = Setting::get('business_name', 'Biba of Good Things');
-        $rawPhone = Setting::get('whatsapp_number', '2348000000000');
+        $rawPhone = Setting::get('whatsapp_number', '2348083271068');
         $phone = $this->normalizePhoneNumber($rawPhone);
 
         $customerName = trim($customerData['name'] ?? '');
@@ -110,7 +110,7 @@ class WhatsAppService
         }
 
         if (empty($clean)) {
-            return '2348000000000';
+            return '2348083271068';
         }
 
         return $clean;

@@ -19,7 +19,7 @@ const settings = computed(() => page.props.settings);
 const cartCount = computed(() => page.props.cartCount || 0);
 
 const whatsappFloatUrl = computed(() => {
-    const raw = settings.value?.whatsapp_number || '2348012345678';
+    const raw = settings.value?.whatsapp_number || '2348083271068';
     const clean = raw.replace(/[^\d]/g, '');
     return `https://wa.me/${clean}?text=${encodeURIComponent('Hello Biba! I am visiting your store and would like to ask a question.')}`;
 });

@@ -21,7 +21,7 @@ class CartController extends Controller
 
         return Inertia::render('Cart/Index', [
             'cart' => $cart,
-            'whatsappNumber' => Setting::get('whatsapp_number', '2348000000000'),
+            'whatsappNumber' => Setting::get('whatsapp_number', '2348083271068'),
             'deliveryInfo' => Setting::get('delivery_info'),
         ]);
     }

@@ -162,7 +162,7 @@ const clothingCategory = computed(() => props.categories.find(c => c.slug === 'c
 const confectioneryCategory = computed(() => props.categories.find(c => c.slug === 'confectionery'));
 
 const whatsappUrl = computed(() => {
-    const raw = settings.value?.whatsapp_number || '2348012345678';
+    const raw = settings.value?.whatsapp_number || '2348083271068';
     const clean = raw.replace(/[^\d]/g, '');
     return `https://wa.me/${clean}?text=${encodeURIComponent('Hello Biba! I would like to place an order.')}`;
 });

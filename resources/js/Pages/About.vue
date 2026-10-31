@@ -16,7 +16,7 @@ const page = usePage<PageProps>();
 const settings = computed(() => page.props.settings);
 
 const whatsappUrl = computed(() => {
-    const raw = settings.value?.whatsapp_number || '2348012345678';
+    const raw = settings.value?.whatsapp_number || '2348083271068';
     const clean = raw.replace(/[^\d]/g, '');
     return `https://wa.me/${clean}?text=${encodeURIComponent('Hello Biba! I would like to learn more about your products.')}`;
 });

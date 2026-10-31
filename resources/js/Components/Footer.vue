@@ -17,7 +17,7 @@ const logoSrc = computed(() => {
 });
 
 const whatsappUrl = computed(() => {
-    const raw = settings.value?.whatsapp_number || '2348012345678';
+    const raw = settings.value?.whatsapp_number || '2348083271068';
     const clean = raw.replace(/[^\d]/g, '');
     return `https://wa.me/${clean}?text=${encodeURIComponent('Hello! I would like to make an enquiry with Biba of Good Things.')}`;
 });
@@ -125,7 +125,7 @@ const whatsappUrl = computed(() => {
                         </div>
                         <div class="flex items-center gap-2">
                             <Mail class="w-3.5 h-3.5 shrink-0 text-zinc-400" />
-                            <span>{{ settings?.contact_email || 'hello@biba.com' }}</span>
+                            <span>{{ settings?.contact_email || 'bibaofgoodthings@gmail.com' }}</span>
                         </div>
                     </div>
 

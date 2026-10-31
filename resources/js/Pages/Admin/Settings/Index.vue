@@ -144,7 +144,7 @@ const ungroupedSettings = computed(() => props.settings.filter(s => !groupedKeys
                                 {{ (form.errors as any)[`settings.${key}`] }}
                             </p>
                             <p v-if="key === 'whatsapp_number'" class="text-xs text-zinc-400 mt-1">
-                                Enter the number with country code but without the + sign. E.g. 2348012345678
+                                Enter the number with country code but without the + sign. E.g. 2348083271068
                             </p>
                         </div>
                     </div>
