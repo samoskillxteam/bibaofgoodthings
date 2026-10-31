@@ -40,11 +40,11 @@ const submit = () => {
         </div>
 
         <div class="sm:mx-auto sm:w-full sm:max-w-md text-center space-y-3">
-            <div class="w-16 h-16 rounded-2xl bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-2 flex items-center justify-center mx-auto shadow-md">
+            <div class="w-32 h-32 flex items-center justify-center mx-auto">
                 <img 
                     :src="logoSrc" 
                     alt="Biba of Good Things" 
-                    class="w-full h-full object-contain rounded-xl"
+                    class="w-full h-full object-contain"
                 />
             </div>
             <h2 class="font-display font-bold text-2xl sm:text-3xl tracking-tight text-zinc-900 dark:text-zinc-100">
